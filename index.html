@@ -5,34 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MediPriceHub: Medicine Price Guides and Safe Buying Tips for Pakistan</title>
 <meta name="description" content="MediPriceHub explains medicine prices in Pakistan in plain language: official DRAP prices, how to compare brands, how to read a label and how to buy medicines safely.">
-<style>
-:root{--bg:#ffffff;--ink:#1c2a2b;--muted:#566668;--line:#d9e3e2;--accent:#0b6b61;--soft:#eef6f5;--warn:#fff6e0;--warnline:#e6c875}
-@media (prefers-color-scheme:dark){:root{--bg:#121a1b;--ink:#e8f0ef;--muted:#a3b5b3;--line:#2a3a3b;--accent:#5fd0c2;--soft:#18262a;--warn:#2b2615;--warnline:#6b5a22}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Georgia,"Times New Roman",serif}
-a{color:var(--accent)}
-header,footer{padding:16px 20px;border-bottom:1px solid var(--line)}
-footer{border-top:1px solid var(--line);border-bottom:0;margin-top:48px;color:var(--muted);font:14px/1.6 system-ui,sans-serif}
-.bar{max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;font-family:system-ui,sans-serif}
-.brand{font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
-.bar nav a{margin-right:16px;font-size:15px;text-decoration:none}
-main{max-width:760px;margin:0 auto;padding:28px 20px}
-h1{font-size:36px;line-height:1.2;margin:8px 0 12px}
-h2{font:700 24px/1.3 system-ui,sans-serif;margin:40px 0 10px}
-.lead{font-size:19px;color:var(--ink)}
-.answer{background:var(--soft);border-left:4px solid var(--accent);padding:16px 18px;margin:24px 0;border-radius:4px}
-.answer p{margin:0}
-.warn{background:var(--warn);border:1px solid var(--warnline);padding:14px 18px;border-radius:4px;font-size:16px}
-.card{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:14px 0}
-.card h3{font:700 19px/1.4 system-ui,sans-serif;margin:0 0 6px}
-.card p{margin:6px 0}
-.tag{font:600 12px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-ul{padding-left:22px}
-li{margin:6px 0}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-@media (max-width:520px){h1{font-size:29px}body{font-size:16px}.lead{font-size:17px}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -42,55 +15,61 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
   </div>
 </header>
 
-<main>
-<article>
-  <h1>Understand medicine prices in Pakistan</h1>
-  <p class="lead">MediPriceHub explains medicine prices in plain language. We use official DRAP information to help you compare brands fairly, read what is on the pack and buy medicines more safely.</p>
-
-  <div class="answer">
-    <p>MediPriceHub does not sell medicines and does not give medical advice. It is an independent information website run by a pharmacist.</p>
-  </div>
+<main class="wide">
+<div class="home">
+  <section class="hero">
+    <h1>Understand medicine prices in Pakistan</h1>
+    <p class="lead">Clear, official-source guides to help you compare brands fairly, read what is on the pack and buy medicines more safely.</p>
+    <a class="btn" href="health-guides.html">Read the guides</a>
+    <a class="btn ghost" href="about.html">Who runs this site</a>
+  </section>
 
   <h2>Start with our guides</h2>
-
-  <div class="card">
-    <span class="tag">Pricing basics</span>
-    <h3><a href="how-drap-sets-medicine-prices-pakistan.html">How DRAP sets medicine prices in Pakistan</a></h3>
-    <p>What a maximum retail price is, who fixes it, why prices change, and what to do if you are overcharged.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Pricing basics</span>
+      <h3><a href="how-drap-sets-medicine-prices-pakistan.html">How DRAP sets medicine prices</a></h3>
+      <p>What a maximum retail price is, who fixes it, why prices change, and what to do if you are overcharged.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Pain relief</span>
+      <h3><a href="paracetamol-price-guide.html">Paracetamol price in Pakistan</a></h3>
+      <p>The official DRAP price for Paracetamol 500mg tablets and how to compare brands per tablet.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Comparing brands</span>
+      <h3><a href="brand-vs-generic-medicines-pakistan.html">Brand vs generic medicines</a></h3>
+      <p>Why one medicine has many brands and prices, and when to ask your pharmacist before switching.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Do the maths</span>
+      <h3><a href="medicine-pack-sizes-explained-pakistan.html">What does 20 x 10's mean?</a></h3>
+      <p>Pack sizes explained, and how to work out the price per tablet or per millilitre.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Reading the pack</span>
+      <h3><a href="how-to-read-medicine-label-pakistan.html">How to read a medicine label</a></h3>
+      <p>What strength, batch number, expiry date, registration number and printed price mean.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Safety</span>
+      <h3><a href="how-to-spot-fake-unregistered-medicines-pakistan.html">How to spot fake medicines</a></h3>
+      <p>Practical steps to lower your risk, and what to do if you suspect a problem.</p>
+    </div>
+    <div class="card">
+      <span class="tag">At home</span>
+      <h3><a href="how-to-store-medicines-safely-at-home-pakistan.html">How to store medicines safely</a></h3>
+      <p>Simple rules for heat, humidity, children and expiry dates.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <span class="tag">Pain relief</span>
-    <h3><a href="paracetamol-price-guide.html">Paracetamol price in Pakistan</a></h3>
-    <p>The official DRAP price for Paracetamol 500mg tablets and how to compare brands per tablet.</p>
-  </div>
-
-  <div class="card">
-    <span class="tag">Comparing brands</span>
-    <h3><a href="brand-vs-generic-medicines-pakistan.html">Brand vs generic medicines in Pakistan</a></h3>
-    <p>Why one medicine has many brands and prices, and when to ask your pharmacist before switching.</p>
-  </div>
-
-  <div class="card">
-    <span class="tag">Reading the pack</span>
-    <h3><a href="how-to-read-medicine-label-pakistan.html">How to read a medicine label in Pakistan</a></h3>
-    <p>What strength, batch number, expiry date, registration number and printed price mean.</p>
-  </div>
-
-  <div class="card">
-    <span class="tag">Safety</span>
-    <h3><a href="how-to-spot-fake-unregistered-medicines-pakistan.html">How to spot fake or unregistered medicines</a></h3>
-    <p>Practical steps to lower your risk, and what to do if you suspect a problem.</p>
-  </div>
-
-  <p><a href="health-guides.html">See all health guides</a></p>
+  <p><a href="health-guides.html"><strong>See all health guides &rarr;</strong></a></p>
 
   <h2>How we work</h2>
-  <ul>
-    <li><strong>Official sources first.</strong> Prices and rules come from the Drug Regulatory Authority of Pakistan (DRAP), and every guide lists its sources.</li>
-    <li><strong>Dates on everything.</strong> Prices change, so each guide shows when it was last reviewed and how to check the current figure.</li>
-    <li><strong>Fair comparison.</strong> We only compare the same ingredient, strength, dosage form and pack size.</li>
-  </ul>
+  <div class="facts">
+    <div class="fact"><strong>Official sources first</strong><p>Prices and rules come from the Drug Regulatory Authority of Pakistan (DRAP), and every guide lists its sources.</p></div>
+    <div class="fact"><strong>Dates on everything</strong><p>Prices change, so each guide shows when it was reviewed and how to check the current figure.</p></div>
+    <div class="fact"><strong>Fair comparison</strong><p>We only compare the same ingredient, strength, dosage form and pack size.</p></div>
+  </div>
 
   <h2>Who runs MediPriceHub</h2>
   <p>MediPriceHub is run by Muhammad Amir Raza, who holds a Pharm.D and an MS in Pharmacy. Read more on our <a href="about.html">About page</a>, or <a href="contact.html">contact us</a> to report a correction or suggest a topic.</p>
@@ -99,15 +78,15 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
   <p>The Drug Regulatory Authority of Pakistan lists registered product prices on its <a href="https://e.dra.gov.pk/public/price" rel="noopener">PharmaPrice Index</a>. Always check the date a price took effect.</p>
 
   <div class="warn">
-    <strong>Important:</strong> MediPriceHub provides general information only and is not medical advice. Prices and availability can change. See our <a href="disclaimer.html">Disclaimer</a>.
+    <strong>Important:</strong> MediPriceHub does not sell medicines and does not give medical advice. Prices and availability can change. See our <a href="disclaimer.html">Disclaimer</a>.
   </div>
-</article>
+</div>
 </main>
 
 <footer>
   <div class="bar">
-    <nav aria-label="Footer"><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="editorial-policy.html">Editorial Policy</a> · <a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="terms.html">Terms</a></nav>
-    <span>© 2026 MediPriceHub. Educational information only, not medical advice. Prices and availability can change.</span>
+    <nav aria-label="Footer"><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="editorial-policy.html">Editorial Policy</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="disclaimer.html">Disclaimer</a> &middot; <a href="terms.html">Terms</a></nav>
+    <span>&copy; 2026 MediPriceHub. Educational information only, not medical advice. Prices and availability can change.</span>
   </div>
 </footer>
 </body>
