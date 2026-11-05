@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicine Price Search: Brands, Pack Sizes and Official DRAP Prices | MediPriceHub</title>
+<meta name="description" content="Search official DRAP medicine prices in Pakistan by generic name or brand. See every listed brand with its pack size, price, price per tablet and the date the price took effect.">
+<link rel="stylesheet" href="style.css">
+<style>
+.search-box input{display:block;width:100%;padding:14px 16px;font-size:18px;border:2px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink)}
+.search-box input:focus{outline:3px solid var(--accent2);outline-offset:1px;border-color:var(--accent2)}
+.search-box label,.tools label{font-weight:700;font-size:15px}
+.tools{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:14px 0}
+.tools select{padding:8px 10px;font-size:15px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+#count{color:var(--muted);font-size:15px}
+#status{margin:10px 0;color:var(--muted)}
+.sub{display:block;font-size:13px;color:var(--muted);white-space:pre-line}
+.small{font-size:13px;color:var(--muted)}
+.more-btn{display:inline-block;padding:11px 22px;border:0;border-radius:999px;background:var(--accent);color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin:8px 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">MediPriceHub</a>
+    <nav aria-label="Main"><a href="index.html">Home</a><a href="health-guides.html">Health Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+
+<main class="wide">
+<article>
+  <p class="meta">Price search</p>
+  <h1>Medicine price search</h1>
+  <p>Source: DRAP PharmaPrice Index and official DRAP notifications. Data last updated 5 November 2026.</p>
+
+  <div class="answer">
+    <p>Type a <strong>generic name</strong> (the active ingredient) or a brand to see the listed products, their pack sizes and official prices. This database is still growing, so a medicine you search for may not be listed yet. If it isn't, check DRAP's <a href="https://e.dra.gov.pk/public/price" rel="noopener">PharmaPrice Index</a> directly.</p>
+  </div>
+
+  <div class="search-box">
+    <label for="q">Search by generic name, brand or manufacturer</label>
+    <input id="q" type="search" placeholder="For example: paracetamol, enoxaparin" autocomplete="off">
+  </div>
+  <div class="tools">
+    <label for="sort">Sort by</label>
+    <select id="sort">
+      <option value="unit">Price per tablet (lowest first)</option>
+      <option value="price">Pack price (lowest first)</option>
+      <option value="name">Name (A to Z)</option>
+    </select>
+    <span id="count"></span>
+  </div>
+  <div id="status" aria-live="polite">Loading the price data...</div>
+  <noscript><p>This search needs JavaScript. Please enable it, or check prices directly on DRAP's PharmaPrice Index.</p></noscript>
+
+  <div class="scroll">
+    <table id="tbl" hidden>
+      <thead><tr><th>Product</th><th>Manufacturer</th><th>Pack size</th><th>Price (Rs)</th><th>Per tablet (approx.)</th><th>Effective from</th></tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+  <button type="button" class="more-btn" id="more" hidden>Show more results</button>
+
+  <h2>How to read the results</h2>
+  <ul>
+    <li><strong>Price</strong> is the price listed for that pack, in rupees, on the date shown. Prices change, so always look at the "Effective from" date.</li>
+    <li><strong>Per tablet</strong> is worked out only for simple pack sizes such as "20 x 10's". For liquids, injections and unusual packs, it shows a dash. See <a href="medicine-pack-sizes-explained-pakistan.html">pack sizes explained</a>.</li>
+    <li><strong>Compare like with like:</strong> same ingredient, same strength and same form. See <a href="brand-vs-generic-medicines-pakistan.html">brand vs generic medicines</a>.</li>
+    <li>A product with the same price under every brand, such as a notified maximum price, is marked as covering all registered brands.</li>
+  </ul>
+  <p>You can also use our <a href="medicine-price-comparison-calculator.html">price comparison calculator</a> to compare packs you have seen in a shop.</p>
+
+  <div class="warn">
+    <strong>Important:</strong> These figures are copied from official DRAP sources and may be out of date, incomplete or changed. Always confirm the current price with DRAP and your pharmacist. A lower price does not mean a medicine is right for you. MediPriceHub provides general information and not medical advice. See our <a href="disclaimer.html">Disclaimer</a>.
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>Where do these prices come from?</summary>
+    <p>They come from DRAP's PharmaPrice Index and from official DRAP price notifications. We copy them and show the date they took effect.</p>
+  </details>
+  <details>
+    <summary>Why can't I find my medicine?</summary>
+    <p>The database does not yet include every registered product. Try the generic name, check the spelling, or look it up on DRAP's PharmaPrice Index.</p>
+  </details>
+  <details>
+    <summary>Is the cheapest brand the best choice?</summary>
+    <p>Not necessarily. Choose a registered, in-date product from a licensed pharmacy, and ask your pharmacist before you switch brands. See <a href="questions-to-ask-your-pharmacist-pakistan.html">10 questions to ask your pharmacist</a>.</p>
+  </details>
+</article>
+</main>
+
+<footer>
+  <div class="bar">
+    <nav aria-label="Footer"><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="editorial-policy.html">Editorial Policy</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="disclaimer.html">Disclaimer</a> &middot; <a href="terms.html">Terms</a></nav>
+    <span>&copy; 2026 MediPriceHub. Educational information only, not medical advice. Prices and availability can change.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var PAGE = 50;
+  var rows = [];
+  var results = [];
+  var shown = 0;
+  var q = document.getElementById('q');
+  var sortEl = document.getElementById('sort');
+  var statusEl = document.getElementById('status');
+  var countEl = document.getElementById('count');
+  var tbl = document.getElementById('tbl');
+  var body = document.getElementById('body');
+  var moreBtn = document.getElementById('more');
+
+  function parseCSV(text) {
+    var out = [], row = [], f = '', inQ = false, i, c;
+    if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+    for (i = 0; i < text.length; i++) {
+      c = text[i];
+      if (inQ) {
+        if (c === '"') {
+          if (text[i + 1] === '"') { f += '"'; i++; } else { inQ = false; }
+        } else { f += c; }
+      } else if (c === '"') { inQ = true; }
+      else if (c === ',') { row.push(f); f = ''; }
+      else if (c === '\n' || c === '\r') {
+        if (c === '\r' && text[i + 1] === '\n') i++;
+        row.push(f); f = '';
+        if (row.length > 1 || row[0] !== '') out.push(row);
+        row = [];
+      } else { f += c; }
+    }
+    if (f !== '' || row.length) { row.push(f); out.push(row); }
+    return out;
+  }
+
+  function priceNum(s) {
+    var n = parseFloat(String(s || '').replace(/[^0-9.]/g, ''));
+    return isNaN(n) ? null : n;
+  }
+
+  function unitsFromPack(p) {
+    var s = String(p || '').replace(/\s+/g, '').replace(/[\u2018\u2019`]/g, "'");
+    var m = s.match(/^(\d+)[xX](\d+)'?s?$/);
+    if (m) return parseInt(m[1], 10) * parseInt(m[2], 10);
+    m = s.match(/^(\d+)'?s$/);
+    if (m) return parseInt(m[1], 10);
+    return null;
+  }
+
+  function build(table) {
+    var head = table[0].map(function (h) { return h.trim().toLowerCase(); });
+    function col(name, fb) { var k = head.indexOf(name); return k > -1 ? k : fb; }
+    var iName = col('product name', 0), iReg = col('reg. number', 1), iMan = col('manufacturer', 2),
+        iPack = col('pack size', 4), iPrice = col('price', 5), iDate = col('effective from', 6);
+    var list = [];
+    for (var r = 1; r < table.length; r++) {
+      var t = table[r];
+      if (!t[iName] || !t[iName].trim()) continue;
+      var lines = t[iName].split(/\r?\n/).map(function (x) { return x.trim(); }).filter(Boolean);
+      var price = priceNum(t[iPrice]);
+      var units = unitsFromPack(t[iPack]);
+      var item = {
+        brand: lines[0] || '',
+        generic: lines.slice(1).join(' / '),
+        reg: (t[iReg] || '').trim(),
+        man: (t[iMan] || '').trim(),
+        pack: (t[iPack] || '').trim(),
+        price: price,
+        unit: (price !== null && units) ? price / units : null,
+        date: (t[iDate] || '').trim()
+      };
+      item.hay = (item.brand + ' ' + item.generic + ' ' + item.man + ' ' + item.reg).toLowerCase();
+      list.push(item);
+    }
+    return list;
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function fmt(n) {
+    return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function sortList(list) {
+    var mode = sortEl.value;
+    var big = Number.MAX_VALUE;
+    return list.slice().sort(function (a, b) {
+      if (mode === 'name') return a.brand.localeCompare(b.brand);
+      if (mode === 'price') return (a.price === null ? big : a.price) - (b.price === null ? big : b.price);
+      return (a.unit === null ? big : a.unit) - (b.unit === null ? big : b.unit);
+    });
+  }
+
+  function renderMore() {
+    var html = '';
+    var end = Math.min(shown + PAGE, results.length);
+    for (var i = shown; i < end; i++) {
+      var r = results[i];
+      html += '<tr><td><strong>' + esc(r.brand) + '</strong>' +
+        (r.generic ? '<span class="sub">' + esc(r.generic) + '</span>' : '') + '</td>' +
+        '<td>' + esc(r.man) + (r.reg && r.reg !== 'n/a' ? '<span class="sub">Reg. ' + esc(r.reg) + '</span>' : '') + '</td>' +
+        '<td>' + esc(r.pack) + '</td>' +
+        '<td>' + (r.price !== null ? fmt(r.price) : '&mdash;') + '</td>' +
+        '<td>' + (r.unit !== null ? fmt(r.unit) : '&mdash;') + '</td>' +
+        '<td>' + esc(r.date) + '</td></tr>';
+    }
+    body.insertAdjacentHTML('beforeend', html);
+    shown = end;
+    moreBtn.hidden = shown >= results.length;
+  }
+
+  function search() {
+    var tokens = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    body.innerHTML = '';
+    shown = 0;
+    if (!tokens.length) {
+      tbl.hidden = true; moreBtn.hidden = true; countEl.textContent = '';
+      statusEl.textContent = rows.length + ' products loaded. Type a medicine name to search.';
+      return;
+    }
+    results = sortList(rows.filter(function (r) {
+      return tokens.every(function (t) { return r.hay.indexOf(t) > -1; });
+    }));
+    if (!results.length) {
+      tbl.hidden = true; moreBtn.hidden = true; countEl.textContent = '';
+      statusEl.textContent = 'No products found for "' + q.value.trim() + '". The database does not cover every medicine yet. Try the generic name, or check DRAP\'s PharmaPrice Index.';
+      return;
+    }
+    statusEl.textContent = '';
+    countEl.textContent = results.length + (results.length === 1 ? ' result' : ' results');
+    tbl.hidden = false;
+    renderMore();
+  }
+
+  var timer;
+  q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(search, 150); });
+  sortEl.addEventListener('change', search);
+  moreBtn.addEventListener('click', renderMore);
+
+  fetch('medicine-data.csv')
+    .then(function (r) { if (!r.ok) throw new Error('load'); return r.text(); })
+    .then(function (t) { rows = build(parseCSV(t)); search(); })
+    .catch(function () { statusEl.textContent = 'The price data could not be loaded. Please try again later, or check DRAP\'s PharmaPrice Index.'; });
+})();
+</script>
+</body>
+</html>
