@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pharmdaamir2121-ops.github.io/medipricehub/sitemap.xml
+Sitemap: https://medipricehub.online/sitemap.xml
